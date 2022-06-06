@@ -8,37 +8,50 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[Account](
-	[AccountId] [int] NOT NULL,
-	[Username] [nvarchar](50) NOT NULL,
-	[Password] [nvarchar](50) NOT NULL,
-	[Role] [nchar](10) NOT NULL,
- CONSTRAINT [PK_Account] PRIMARY KEY CLUSTERED 
-(
-	[AccountId] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
+SELECT TOP (1000) [GroupID]
+      ,[Groupname]
+      ,[CourseID]
+      ,[StudentID]
+      ,[LectureID]
+  FROM [checkattendedproject].[dbo].[Group]
 
-
-CREATE TABLE [dbo].[Admin](
-	[AccountId] [int] NOT NULL,
-	[name] [nchar](50) NOT NULL,
- CONSTRAINT [PK_Admin] PRIMARY KEY CLUSTERED 
-(
-	[AccountId] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-
-CREATE TABLE [dbo].[Teacher](
-	[AccountId] [nvarchar](50) NOT NULL,
-	[Name] [nchar](50) NOT NULL,
-	[birthday] [nvarchar](50) NOT NULL,
-	[addresss] [nvarchar](150) NOT NULL,
- CONSTRAINT [PK_Teacher] PRIMARY KEY CLUSTERED 
-(
-	[AccountId] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
+SELECT TOP (1000) [StudentId]
+      ,[Studentname]
+      ,[address]
+  FROM [checkattendedproject].[dbo].[Student]
+  GO
+  
+  SELECT TOP (1000) [LecutreId]
+      ,[Lecturename]
+      ,[GroupId]
+  FROM [checkattendedproject].[dbo].[Lecture]
+  GO
+  
+  SELECT TOP (1000) [CourseID]
+      ,[Coursename]
+  FROM [checkattendedproject].[dbo].[Course]
+  GO
+  
+  SELECT TOP (1000) [LecutreId]
+      ,[Lecturename]
+      ,[GroupId]
+  FROM [checkattendedproject].[dbo].[Lecture]
+  GO
+  
+  SELECT TOP (1000) [SlotIndex]
+      ,[SessionID]
+  FROM [checkattendedproject].[dbo].[slottt]
+  GO
+  
+  SELECT TOP (1000) [SessionID]
+      ,[SessionName]
+  FROM [checkattendedproject].[dbo].[session]
+  GO
+  SELECT TOP (1000) [Attendedname]
+  FROM [checkattendedproject].[dbo].[Attended]
+  GO
+  SELECT TOP (1000) [RoomID]
+      ,[SessionID]
+      ,[SessionName]
+  FROM [checkattendedproject].[dbo].[Room]
+  GO
