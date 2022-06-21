@@ -1,15 +1,64 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Responsive tables that stack on mobile Bootstrap 4 - no horizontal scroll</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+
+   <h2>Check Attended</h2>
+   <table class="table table-bordered table-striped table-responsive-stack"  id="tableOne">
+      <thead class="thead-dark">
+         <tr>
+            <th>StudentId</th>
+            <th>StudentName</th>
+            <th>StudentCode</th>
+            <th>StudentCode</th>
+            <th>Status</th>
+           
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>1</td>
+            <td>Chu Quang Vũ</td>
+            <td>HE150798</td>
+            <td>SE1626</td>
+            <td style="color: green">Present</td>
+         </tr>
+          <tr>
+            <td>2</td>
+            <td>Nguyễn Thành Long</td>
+            <td>HE150123</td>
+            <td>SE1626</td>
+            <td style="color: green">Present</td>
+         </tr>
+          <tr>
+            <td>3</td>
+            <td>Phan Đăng Huy</td>
+            <td>HE150124</td>
+            <td>SE1626</td>
+            <td style="color: red">Absent</td>
+         </tr>
+          <tr>
+            <td>4</td>
+            <td>Đỗ Đức Đại</td>
+            <td>HE150144</td>
+            <td>SE1626</td>
+             <td style="color: red">Absent</td>
+         </tr>
+         
+      </tbody>
+   </table>
+</div>
+<!-- /.container -->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script  src="./script.js"></script>
+
+</body>
 </html>
