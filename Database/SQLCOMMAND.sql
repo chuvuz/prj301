@@ -34,6 +34,7 @@ GroupID int primary key,
 
 
 
+
 create table Lecture(
   LectureId int Primary key,
   LectureName nvarchar(150),
@@ -85,3 +86,6 @@ ADD FOREIGN KEY (SessionId) REFERENCES Session(SessionId);
 
 ALTER TABLE Student
 ADD FOREIGN KEY (StudentId) REFERENCES Attndance(StudentId);
+
+
+select Status, GroupName,StudentCode , StudentName, StudentId from Student
