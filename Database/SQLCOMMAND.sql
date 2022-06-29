@@ -89,3 +89,8 @@ ADD FOREIGN KEY (StudentId) REFERENCES Attndance(StudentId);
 
 
 select Status, GroupName,StudentCode , StudentName, StudentId from Student
+
+
+SELECT GroupMain.Groupname, Student.Groupname
+FROM Student
+INNER JOIN GroupMain ON Student.Groupname = GroupMain.Groupname;
