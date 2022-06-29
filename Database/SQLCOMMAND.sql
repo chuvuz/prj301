@@ -14,8 +14,8 @@ ADD FOREIGN KEY (CourseID) REFERENCES Course(CourseID);
 ALTER TABLE GroupMain
 ADD FOREIGN KEY (LectureId) REFERENCES Lecture(LectureId);
 
-ALTER TABLE GroupMain
-ADD FOREIGN KEY (StudentId) REFERENCES Student(StudentId);
+ALTER TABLE  StudentGroup
+ADD FOREIGN KEY (StudentId) REFERENCES GroupMain(StudentId);
 
 ALTER TABLE GroupMain
 ADD FOREIGN KEY (SessionId) REFERENCES Session(SessionId);
@@ -31,7 +31,6 @@ GroupID int primary key,
  SessionId int ,
  StudentId int
 );
-
 
 
 
@@ -88,9 +87,13 @@ ALTER TABLE Student
 ADD FOREIGN KEY (StudentId) REFERENCES Attndance(StudentId);
 
 
-select Status, GroupName,StudentCode , StudentName, StudentId from Student
+create table StudentGroup(
+StudentId int,
+GroupId int ,
+Constraint PK_StudentGroup PRIMARY KEY(StudentId,GroupId)
+)
 
+drop table StudentGroup
 
-SELECT GroupMain.Groupname, Student.Groupname
-FROM Student
-INNER JOIN GroupMain ON Student.Groupname = GroupMain.Groupname;
+ALTER TABLE StudentGroup
+ADD PRIMARY KEY 
