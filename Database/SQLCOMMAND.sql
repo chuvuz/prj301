@@ -95,5 +95,14 @@ Constraint PK_StudentGroup PRIMARY KEY(StudentId,GroupId)
 
 drop table StudentGroup
 
-ALTER TABLE StudentGroup
-ADD PRIMARY KEY 
+/*select cac thong tin cua 1 group co CourseID = > */
+Select g.GroupID,g.GroupName,g.LectureId,c.CourseId,c.CourseName from [GroupMain] g join Course c On g.CourseId = c.CourseId
+Where c.CourseId = ?
+
+
+/* select tat cac cac sinh vien co groupID = ? */
+Select s.StudentId,s.StudentName,s.StudentCode,
+g.GroupId,g.GroupName,g.LectureId,g.CourseID 
+from Student s join StudentGroup sg on s.StudentID = sg.StudentId
+join [GroupMain] g on sg.GroupId = g.GroupId
+Where g.GroupId = ?
