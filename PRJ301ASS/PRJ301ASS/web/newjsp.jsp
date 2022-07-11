@@ -36,9 +36,9 @@
                 <tbody>
                     <c:forEach items="${s1}" var="s">
                         <tr>
-                            <td>${s.studentid}</td>
-                            <td>${s.studentname}</td><!-- comment -->
-                            <td>${s.gender}</td>
+                            <td>{s.studentid}</td>
+                            <td>{s.studentname}</td><!-- comment -->
+                            <td>{s.gender}</td>
                         </tr>
                     </c:forEach>
 
