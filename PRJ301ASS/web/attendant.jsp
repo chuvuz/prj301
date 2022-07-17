@@ -15,11 +15,12 @@
         <meta charset="UTF-8">
         <title>CHECK</title>
         <link href="style.css" rel="stylesheet" type="text/css"/>
+        <script src="script.js" type="text/javascript"></script>
     </head>
     <body>
         <h2>Check Attended</h2>
         <h3>Lecture : Sonnt</h3>
-        <table class="zigzag">
+        <table class="blue">
             <thead >
                 <tr>
                     <!--                        <th>Index</th>-->
