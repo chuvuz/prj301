@@ -12,7 +12,7 @@ public class Student {
 
     private String studentid;
     private String studentcode;
-    private String studentname;
+    private String studentsurname;
     private String studentmiddlename;
     private String studentgivenname;
     private String studentmail;
@@ -20,10 +20,10 @@ public class Student {
     public Student() {
     }
 
-    public Student(String studentid, String studentcode, String studentname, String studentmiddlename, String studentgivenname, String studentmail) {
+    public Student(String studentid, String studentcode, String studentsurname, String studentmiddlename, String studentgivenname, String studentmail) {
         this.studentid = studentid;
         this.studentcode = studentcode;
-        this.studentname = studentname;
+        this.studentsurname = studentsurname;
         this.studentmiddlename = studentmiddlename;
         this.studentgivenname = studentgivenname;
         this.studentmail = studentmail;
@@ -45,12 +45,12 @@ public class Student {
         this.studentcode = studentcode;
     }
 
-    public String getStudentname() {
-        return studentname;
+    public String getStudentsurname() {
+        return studentsurname;
     }
 
-    public void setStudentname(String studentname) {
-        this.studentname = studentname;
+    public void setStudentsurname(String studentsurname) {
+        this.studentsurname = studentsurname;
     }
 
     public String getStudentmiddlename() {
@@ -79,8 +79,10 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" + "studentid=" + studentid + ", studentcode=" + studentcode + ", studentname=" + studentname + ", studentmiddlename=" + studentmiddlename + ", studentgivenname=" + studentgivenname + ", studentmail=" + studentmail + '}';
+        return "Student{" + "studentid=" + studentid + ", studentcode=" + studentcode + ", studentsurname=" + studentsurname + ", studentmiddlename=" + studentmiddlename + ", studentgivenname=" + studentgivenname + ", studentmail=" + studentmail + '}';
     }
+
+    
     
     
 

@@ -4,7 +4,7 @@
  */
 package Controller;
 
-import DAL.StudentDAO;
+import DAL.StudentDBContext;
 import Model.Student;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -58,10 +58,10 @@ public class studentController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        StudentDAO s = new StudentDAO();
+        StudentDBContext s = new StudentDBContext();
         List<Student> s1 = s.getAll();
         request.setAttribute("s1", s1);
-        request.getRequestDispatcher("newjsp.jsp").forward(request, response);
+        request.getRequestDispatcher("attendant.jsp").forward(request, response);
     }
 
     /**
