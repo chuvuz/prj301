@@ -9,53 +9,79 @@ package Model;
  * @author vu
  */
 public class Student {
-    private int StudentId;
-    private String StudentName;
-    private String StudentCode;
-    private String GroupName;
+
+    private String studentid;
+    private String studentcode;
+    private String studentname;
+    private String studentmiddlename;
+    private String studentgivenname;
+    private String studentmail;
 
     public Student() {
     }
 
-    public Student(int StudentId, String StudentName, String StudentCode, String GroupName) {
-        this.StudentId = StudentId;
-        this.StudentName = StudentName;
-        this.StudentCode = StudentCode;
-        this.GroupName = GroupName;
+    public Student(String studentid, String studentcode, String studentname, String studentmiddlename, String studentgivenname, String studentmail) {
+        this.studentid = studentid;
+        this.studentcode = studentcode;
+        this.studentname = studentname;
+        this.studentmiddlename = studentmiddlename;
+        this.studentgivenname = studentgivenname;
+        this.studentmail = studentmail;
     }
 
-    public int getStudentId() {
-        return StudentId;
+    public String getStudentid() {
+        return studentid;
     }
 
-    public void setStudentId(int StudentId) {
-        this.StudentId = StudentId;
+    public void setStudentid(String studentid) {
+        this.studentid = studentid;
     }
 
-    public String getStudentName() {
-        return StudentName;
+    public String getStudentcode() {
+        return studentcode;
     }
 
-    public void setStudentName(String StudentName) {
-        this.StudentName = StudentName;
+    public void setStudentcode(String studentcode) {
+        this.studentcode = studentcode;
     }
 
-    public String getStudentCode() {
-        return StudentCode;
+    public String getStudentname() {
+        return studentname;
     }
 
-    public void setStudentCode(String StudentCode) {
-        this.StudentCode = StudentCode;
+    public void setStudentname(String studentname) {
+        this.studentname = studentname;
     }
 
-    public String getGroupName() {
-        return GroupName;
+    public String getStudentmiddlename() {
+        return studentmiddlename;
     }
 
-    public void setGroupName(String GroupName) {
-        this.GroupName = GroupName;
+    public void setStudentmiddlename(String studentmiddlename) {
+        this.studentmiddlename = studentmiddlename;
     }
 
+    public String getStudentgivenname() {
+        return studentgivenname;
+    }
+
+    public void setStudentgivenname(String studentgivenname) {
+        this.studentgivenname = studentgivenname;
+    }
+
+    public String getStudentmail() {
+        return studentmail;
+    }
+
+    public void setStudentmail(String studentmail) {
+        this.studentmail = studentmail;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" + "studentid=" + studentid + ", studentcode=" + studentcode + ", studentname=" + studentname + ", studentmiddlename=" + studentmiddlename + ", studentgivenname=" + studentgivenname + ", studentmail=" + studentmail + '}';
+    }
     
     
+
 }
