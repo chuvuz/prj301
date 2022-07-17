@@ -1,61 +1,40 @@
-$(document).ready(function() {
+;(function($) {
+   $.fn.fixMe = function() {
+      return this.each(function() {
+         var $this = $(this),
+            $t_fixed;
+         function init() {
+            $this.wrap('<div class="container" />');
+            $t_fixed = $this.clone();
+            $t_fixed.find("tbody").remove().end().addClass("fixed").insertBefore($this);
+            resizeFixed();
+         }
+         function resizeFixed() {
+            $t_fixed.find("th").each(function(index) {
+               $(this).css("width",$this.find("th").eq(index).outerWidth()+"px");
+            });
+         }
+         function scrollFixed() {
+            var offset = $(this).scrollTop(),
+            tableOffsetTop = $this.offset().top,
+            tableOffsetBottom = tableOffsetTop + $this.height() - $this.find("thead").height();
+            if(offset < tableOffsetTop || offset > tableOffsetBottom)
+               $t_fixed.hide();
+            else if(offset >= tableOffsetTop && offset <= tableOffsetBottom && $t_fixed.is(":hidden"))
+               $t_fixed.show();
+         }
+         $(window).resize(resizeFixed);
+         $(window).scroll(scrollFixed);
+         init();
+      });
+   };
+})(jQuery);
 
-   
-   // inspired by http://jsfiddle.net/arunpjohny/564Lxosz/1/
-   $('.table-responsive-stack').find("th").each(function (i) {
-      
-      $('.table-responsive-stack td:nth-child(' + (i + 1) + ')').prepend('<span class="table-responsive-stack-thead">'+ $(this).text() + ':</span> ');
-      $('.table-responsive-stack-thead').hide();
-   });
-
-   
-   
-   
-   
-$( '.table-responsive-stack' ).each(function() {
-  var thCount = $(this).find("th").length; 
-   var rowGrow = 100 / thCount + '%';
-   //console.log(rowGrow);
-   $(this).find("th, td").css('flex-basis', rowGrow);   
-});
-   
-   
-   
-   
-function flexTable(){
-   if ($(window).width() < 768) {
-      
-   $(".table-responsive-stack").each(function (i) {
-      $(this).find(".table-responsive-stack-thead").show();
-      $(this).find('thead').hide();
-   });
-      
-    
-   // window is less than 768px   
-   } else {
-      
-      
-   $(".table-responsive-stack").each(function (i) {
-      $(this).find(".table-responsive-stack-thead").hide();
-      $(this).find('thead').show();
-   });
-      
-      
-
-   }
-// flextable   
-}      
- 
-flexTable();
-   
-window.onresize = function(event) {
-    flexTable();
-};
-   
-   
-   
-   
-
-  
-// document ready  
+$(document).ready(function(){
+   $("table").fixMe();
+   $(".up").click(function() {
+      $('html, body').animate({
+      scrollTop: 0
+   }, 2000);
+ });
 });
