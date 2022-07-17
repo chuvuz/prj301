@@ -26,9 +26,7 @@ public class StudentDAO extends DBContext1 {
             ResultSet rs = st.executeQuery();
             while (rs.next()) {
                 Student s = new Student();
-                s.setStudentid(rs.getInt(1));
-                s.setStudentname(rs.getString(2));
-                s.setGender(rs.getBoolean(3));
+              
                 
                 lists.add(s);
             }

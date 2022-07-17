@@ -5,11 +5,11 @@
         <group>
             <file>file:/D:/Downloads/WebApp_EF/prj301/PRJ301ASS/web/META-INF/context.xml</file>
             <file>file:/D:/Downloads/WebApp_EF/prj301/PRJ301ASS/src/java/DAL/DBContext1.java</file>
-            <file>file:/D:/Downloads/WebApp_EF/prj301/PRJ301ASS/src/java/Controller/StudentController.java</file>
             <file>file:/D:/Downloads/WebApp_EF/prj301/PRJ301ASS/src/java/DAL/StudentDAO.java</file>
             <file>file:/D:/Downloads/WebApp_EF/prj301/PRJ301ASS/web/script.js</file>
             <file>file:/D:/Downloads/WebApp_EF/prj301/PRJ301ASS/src/java/Model/Student.java</file>
             <file>file:/D:/Downloads/WebApp_EF/prj301/PRJ301ASS/web/WEB-INF/web.xml</file>
+            <file>file:/D:/Downloads/WebApp_EF/prj301/PRJ301ASS/src/java/Controller/studentController.java</file>
             <file>file:/D:/Downloads/WebApp_EF/prj301/PRJ301ASS/web/newjsp.jsp</file>
             <file>file:/D:/Downloads/WebApp_EF/prj301/PRJ301ASS/src/conf/MANIFEST.MF</file>
         </group>

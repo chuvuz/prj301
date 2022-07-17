@@ -29,8 +29,9 @@
                         <th>StudentId</th>
                         <th>StudentName</th>
                         <th>Gender</th>
-                        
-
+                        <th>Status</th>
+                        <th>Group Name</th>
+                        <th>Take By</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,6 +40,9 @@
                             <td>${s.studentid}</td>
                             <td>${s.studentname}</td><!-- comment -->
                             <td>${s.gender}</td>
+                            <th style="color : green">Present</th>
+                            <th>Se1626</th>
+                            <th>Sonnt</th>
                         </tr>
                     </c:forEach>
 
